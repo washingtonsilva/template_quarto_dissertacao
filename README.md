@@ -59,7 +59,8 @@ O **corpo** (capítulos/seções) é escrito em `template_dissertacao.qmd`.
 
 **Opção A (no GitHub):**
 
-1. Clique em **Use this template** (no topo deste repositório).
+1. Clique em **Use this template** (no canto superior direito 
+deste repositório).
 
 2. Crie **seu** repositório a partir deste modelo, utilize um 
 nome apropriado (ex.: `dissertacao-joao-silva`).
