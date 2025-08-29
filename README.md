@@ -4,14 +4,15 @@
 > **ATENÇÃO (leia primeiro):** este README é um **guia inicial**.  
 
 > Assim que você criar o seu repositório a partir deste template e 
-clonar o **seu** repositório, **apague o conteúdo abaixo** e passe a usar 
-este próprio arquivo `README.md`** para **documentar a evolução do seu trabalho** 
+clonar o **seu** repositório, **apague todo o conteúdo deste arquivo** e 
+passe a usar este próprio arquivo `README.md`** para 
+**documentar a evolução do seu trabalho** 
  
 > Você pode acessar estas instruções iniciais deste template, acessando 
 este repositório do template original no GitHub.
 
-> Para facilitar, forneço por e-mail um **modelo de README do orientando** como 
-uma referência inicial para você adaptar e usar:
+> Para facilitar, forneço por e-mail um **modelo de README do orientando** 
+como uma referência inicial para você adaptar e usar.
 
 
 
