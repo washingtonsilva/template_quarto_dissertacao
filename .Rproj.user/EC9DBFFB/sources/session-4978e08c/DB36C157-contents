@@ -1,5 +1,5 @@
 
-# Template de Dissertação – Quarto + R/RStudio
+# Template de Dissertação de Mestrado Profissional em Administração
 
 > **ATENÇÃO (leia primeiro):** este README é um **guia inicial**.  
 
@@ -19,9 +19,9 @@ como uma referência inicial para você adaptar e usar.
 
 ## Visão geral
 
-Este repositório fornece um **template de dissertação** do Mestrado 
-Profissional em Administração do IFMG - Campus Formiga que gera um 
-arquivo **dpf** usando **Sistema Quarto** + **R** + **LaTeX**.  
+Este repositório fornece um **template de dissertação** do [Mestrado 
+Profissional em Administração do IFMG - Campus Formiga](https://formiga.ifmg.edu.br/mestrado) 
+que gera um arquivo **dpf** usando **Sistema Quarto** + **R** + **LaTeX**.  
 
 A parte **pré-textual** (capa, folha de rosto, ficha catalográfica, 
 dedicatória (opcional), resumo/abstract, agradecimentos (opcional) é controlada 
@@ -140,17 +140,23 @@ projeto para um caminho simples (ex.: `C:\projetos\minha-dissertacao`).
 
 ## Próximos passos (sugestão de roteiro)
 
-1. Leia e entenda `pre_textuais.tex` (personalize capa, rosto, dedicatória, 
-   resumo/abstract).
-   
-2. Escreva os capítulos no `template_dissertacao.qmd`.
+1. Adicione suas referências em `referencias.bib`. 
 
-3. Adicione suas referências em `referencias.bib`. Mantenha este 
-arquivo organizado (usando espaços e formatação adequada) ou use um 
-gerenciador de referências (ex.: Zotero, Mendeley).
+  - Mantenha seu arquivo .bib organizado (usando espaços e formatação adequada) 
+  ou use um gerenciador de referências (ex.: Zotero, Mendeley).
 
-4. Gere versões de leitura (`quarto render`) e, quando necessário, 
-exporte o PDF final para a pasta `entregas/`.
+2. Após finalizar a modelagem econométrica (utilize um outro 
+projeto RStudio para isso), comece a escrever os capítulos no
+arquivo `template_dissertacao.qmd`.
+
+3. Gere versões de leitura (`quarto render`) e, quando necessário, 
+mova o arquivo pdf gerado para uma pasta (`entregas/`), 
+
+
+4. Leia e entenda `pre_textuais.tex` (personalize capa, rosto, dedicatória, 
+   resumo/abstract), em seguida, faça as edições necessárias.
+  
+
 
 
 
