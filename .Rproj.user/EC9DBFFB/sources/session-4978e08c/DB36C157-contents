@@ -5,7 +5,7 @@
 
 > Assim que você criar o seu repositório a partir deste template e 
 clonar o **seu** repositório, **apague todo o conteúdo deste arquivo** e 
-passe a usar este próprio arquivo `README.md`** para 
+passe a usar este próprio arquivo `README.md` para 
 **documentar a evolução do seu trabalho** 
  
 > Você pode acessar estas instruções iniciais deste template, acessando 
