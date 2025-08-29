@@ -9,16 +9,18 @@
 > 2. **Apague todo o conteúdo deste arquivo README.md**
 > 3. Use este arquivo para **documentar a evolução do seu trabalho**
 > 
-> 📧 **Modelo de README para orientandos:** será enviado por e-mail como referência inicial.
+> 📧 **Modelo de README para orientandos:** será enviado por e-mail como 
+referência inicial.
 
 ---
 
 ## Visão Geral
 
-Template para dissertação do [Mestrado Profissional em Administração do IFMG - Campus Formiga](https://formiga.ifmg.edu.br/mestrado) que gera PDF usando:
+Template para dissertação do [Mestrado Profissional em Administração do IFMG - Campus Formiga](https://formiga.ifmg.edu.br/mestrado) 
+que gera um arquivo pdf usando:
 
 - **Quarto** (sistema de publicação científica)
-- **R** (análises estatísticas)  
+- **R** (linguagem para análise de dados)  
 - **LaTeX** (formatação profissional)
 
 ### Estrutura do documento:
@@ -32,12 +34,12 @@ Template para dissertação do [Mestrado Profissional em Administração do IFMG
 
 ### Pré-requisitos obrigatórios:
 
-1. **R** (versão 4.0+): <https://cran.r-project.org/>
+1. **Linguagem R** (versão 4.0+): <https://cran.r-project.org/>
 2. **RStudio Desktop**: <https://posit.co/download/rstudio-desktop/>
-3. **Quarto**: <https://quarto.org/docs/get-started/>
+3. **Sistema Quarto**: <https://quarto.org/docs/get-started/>
 
 
-### Instalação do LaTeX (obrigatório):
+### Instalação de uma distribuição LaTeX (obrigatório):
 
 Abra o **terminal** (macOS) ou **Prompt de Comando** (Windows) e execute:
 
@@ -74,38 +76,38 @@ tinytex::is_tinytex()
 
 ## Como Utilizar este Template?
 
-### Opção A: Via GitHub (recomendado)
+### Opção: Via GitHub (recomendada)
 
-1. **Criar seu repositório**:
+1. **Crie seu repositório**:
 
-   - Clique em **"Use this template"** (botão verde)
-   - Nome sugerido: `dissertacao-joao-silva`
+   - Clique em **"Use this template"** (botão verde) 
+   - Nome sugerido para seu repositório: `dissertacao-joao-silva`
    - Defina como **privado** (recomendado)
 
-2. **Clonar localmente**:
+2. **Clone localmente:** Caso utilize Windows:
 
-   ```bash
-   git clone https://github.com/SEU-USUARIO/SEU-REPOSITORIO.git
-   cd SEU-REPOSITORIO
-   ```
+- Abra o Windows Explorer e navegue até a pasta na qual deseja salvar 
+a pasta do repositório. 
 
-3. **Abrir no RStudio**:
+- Clique no botão direito do mouse e selecione "Git Bash Here", depois 
+execute: 
 
-   - Duplo-clique em `template_dissertacao.Rproj`
+```bash
+# Substitua SEU-USUARIO e SEU-REPOSITORIO pelos seus dados 
+git clone https://github.com/SEU-USUARIO/SEU-REPOSITORIO.git
+```
 
-### Opção B: Via RStudio
+3. Abra o RStudio e, em seguida, abra o arquivo do projeto (`.Rproj`.)
 
-1. **File → New Project → Version Control → Git**
-2. Cole a URL do **seu** repositório
-3. Escolha pasta local e conclua
+
 
 ### Primeiros passos após instalação:
 
-1. **Teste a renderização**:
+1. **Teste a renderização**: Pelo terminal do RStudio, execute:
 
-   ```r
-   quarto::quarto_render("template_dissertacao.qmd")
-   ```
+```bash
+quarto render template_dissertacao.qmd
+```
 
 2. **Personalize informações básicas** em `pre_textuais.tex`:
 
@@ -129,8 +131,8 @@ tinytex::is_tinytex()
 
 ### Pastas importantes:
 
-- `figs/` - Imagens e gráficos
-- `dados/` - Datasets (se aplicável)
+- `figs/` - Imagens e gráficos externos e elaborados.
+- `dados/` - arquivos de dados
 - `scripts/` - Scripts R auxiliares
 
 ---
@@ -139,9 +141,9 @@ tinytex::is_tinytex()
 
 ### Desenvolvimento diário:
 
-1. **Abrir o RStudio e seu projeto**: duplo-clique no `.Rproj`
-2. **Editar conteúdo**: `template_dissertacao.qmd`
-3. **Renderizar**: `Ctrl+Shift+K` ou botão "Render"
+1. **Abra o RStudio e seu projeto**:
+2. **Edite o conteúdo**: `template_dissertacao.qmd`
+3. **Renderize**: `Ctrl+Shift+K` ou botão "Render"
 4. **Commit frequente**: salvar progresso no Git
 
 ### Entregas importantes:
