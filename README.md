@@ -1,167 +1,238 @@
-
 # Template de Dissertação de Mestrado Profissional em Administração
 
-> **ATENÇÃO (leia primeiro):** este README é um **guia inicial**.  
+> **⚠️ ATENÇÃO - LEIA PRIMEIRO:** 
+> 
+> Este README é um **guia inicial** para configuração do template.
+> 
+> **Após criar seu repositório** a partir deste template:
+> 1. Clone **seu** repositório (não este template)
+> 2. **Apague todo o conteúdo deste arquivo README.md**
+> 3. Use este arquivo para **documentar a evolução do seu trabalho**
+> 
+> 📧 **Modelo de README para orientandos:** será enviado por e-mail como referência inicial.
 
-> Assim que você criar o seu repositório a partir deste template e 
-clonar o **seu** repositório, **apague todo o conteúdo deste arquivo** e 
-passe a usar este próprio arquivo `README.md` para 
-**documentar a evolução do seu trabalho** 
- 
-> Você pode acessar estas instruções iniciais deste template, acessando 
-este repositório do template original no GitHub.
+---
 
-> Para facilitar, forneço por e-mail um **modelo de README do orientando** 
-como uma referência inicial para você adaptar e usar.
+## Visão Geral
 
+Template para dissertação do [Mestrado Profissional em Administração do IFMG - Campus Formiga](https://formiga.ifmg.edu.br/mestrado) que gera PDF usando:
 
+- **Quarto** (sistema de publicação científica)
+- **R** (análises estatísticas)  
+- **LaTeX** (formatação profissional)
 
+### Estrutura do documento:
 
-## Visão geral
+- **Elementos pré-textuais**: controlados por `pre_textuais.tex`
+- **Corpo da dissertação**: escrito em `template_dissertacao.qmd`
 
-Este repositório fornece um **template de dissertação** do [Mestrado 
-Profissional em Administração do IFMG - Campus Formiga](https://formiga.ifmg.edu.br/mestrado) 
-que gera um arquivo **dpf** usando **Sistema Quarto** + **R** + **LaTeX**.  
+---
 
-A parte **pré-textual** (capa, folha de rosto, ficha catalográfica, 
-dedicatória (opcional), resumo/abstract, agradecimentos (opcional) é controlada 
-pelo arquivo`pre_textuais.tex`.  
+## Instalação e Configuração
 
-O **corpo** (capítulos/seções) é escrito em `template_dissertacao.qmd`.
+### Pré-requisitos obrigatórios:
 
-
-
-
-## Requisitos (Windows e macOS)
-
-- **Linguagem R**  
-- IDE **RStudio**  
-- **Sistema Quarto**: <https://quarto.org>  
-- **LaTeX** (recomendado **TinyTeX**):
-
-  - Abra um terminal e execute:  
-  
-    ```bash
-    quarto install tinytex
-    ```
-
-### Observações para **Windows**
-
-- Recomendo instalar **Rtools**: <https://cran.r-project.org/bin/windows/Rtools/> 
-
-- Não utilize caminhos muito longos e com espaços/acentos no caminho 
-  do projeto.  
+1. **R** (versão 4.0+): <https://cran.r-project.org/>
+2. **RStudio Desktop**: <https://posit.co/download/rstudio-desktop/>
+3. **Quarto**: <https://quarto.org/docs/get-started/>
 
 
+### Instalação do LaTeX (obrigatório):
 
-
-## Como começar?
-
-**Opção A (no GitHub):**
-
-1. Clique em **Use this template** (no canto superior direito 
-deste repositório).
-
-2. Crie **seu** repositório a partir deste modelo, utilize um 
-nome apropriado (ex.: `dissertacao-joao-silva`).
-
-3. Clone **seu** repositório localmente (via Git Bash). 
-
-4. Abra o projeto no RStudio (`template_dissertacao.Rproj`).
-
-5. Comece a editar.
-
-
-**Opção B (no RStudio):**
-
-1. *File → New Project → Version Control → Git*  
-2. Cole a URL do **seu** repositório (criado a partir do template).  
-3. Escolha a pasta local e conclua.
-
-
-**Primeira renderização (no terminal Git Bash do projeto):**
+Abra o **terminal** (macOS) ou **Prompt de Comando** (Windows) e execute:
 
 ```bash
-quarto render template_dissertacao.qmd
+quarto install tinytex
 ```
 
-O PDF será gerado na raiz do projeto (por padrão, **não é versionado**).
+### Configurações específicas por sistema:
+
+#### Windows:
+
+- **Instale Rtools**: <https://cran.r-project.org/bin/windows/Rtools/>
+
+- **Evite caminhos com**:
+  - Espaços: `C:\Meus Documentos\` ❌
+  - Acentos: `C:\João\` ❌  
+  - **Use**: `C:\projetos\dissertacao\` ✅
 
 
+### Verificação da instalação:
 
+Abra o RStudio e execute no console:
 
-## Estrutura dos arquivos
+```r
+# Verificar versões
+R.version.string
+quarto::quarto_version()
 
-- `template_dissertacao.qmd` — documento principal (capítulos).
+# Testar LaTeX
+tinytex::is_tinytex()
+```
 
-- `pre_textuais.tex` — elementos **pré-textuais** 
-(capa, rosto, ficha catalográfica, dedicatória, agradecimentos,
-resumo, abstract, ).
+---
 
-- `referencias.bib` — base bibliográfica (BibTeX).
+## Como Utilizar este Template?
 
-- `associacao-brasileira-de-normas-tecnicas-ipea.csl` — estilo ABNT (CSL).
+### Opção A: Via GitHub (recomendado)
 
-- `template_dissertacao.Rproj` — arquivo do projeto RStudio (**é versionado**).
+1. **Criar seu repositório**:
 
-- `entregas/` — use para **versões parciais/final** do PDF 
+   - Clique em **"Use this template"** (botão verde)
+   - Nome sugerido: `dissertacao-joao-silva`
+   - Defina como **privado** (recomendado)
 
-> Observação: o `.gitignore` está configurado para ignorar caches e
-PDFs gerados, o que é uma boa prática para evitar conflitos durante a 
-colaboração.
+2. **Clonar localmente**:
 
+   ```bash
+   git clone https://github.com/SEU-USUARIO/SEU-REPOSITORIO.git
+   cd SEU-REPOSITORIO
+   ```
 
+3. **Abrir no RStudio**:
 
+   - Duplo-clique em `template_dissertacao.Rproj`
 
-## Boas práticas de versionamento
+### Opção B: Via RStudio
 
-- **Versione somente arquivos fontes**: `.qmd`, `.tex`, `.bib`, `.csl`, `.Rproj`.
-- **Não** versione PDFs gerados
-- Faça *commits* frequentes e mensagens descritivas.
-- Evite renomear arquivos sem necessidade (quebra links e referências).
+1. **File → New Project → Version Control → Git**
+2. Cole a URL do **seu** repositório
+3. Escolha pasta local e conclua
 
+### Primeiros passos após instalação:
 
+1. **Teste a renderização**:
 
+   ```r
+   quarto::quarto_render("template_dissertacao.qmd")
+   ```
 
-## Problemas comuns (FAQ rápido)
+2. **Personalize informações básicas** em `pre_textuais.tex`:
 
-- **Erro de LaTeX/falta de pacote**: instale o **TinyTeX** 
-(`quarto install tinytex`) ou o pacote ausente que o erro indicar.
+   - Nome do autor
+   - Título da dissertação
+   - Nome do orientador
+   - Data
 
-- **Caminhos com acentos/espaços** (sobretudo no Windows): evite; mova o 
-projeto para um caminho simples (ex.: `C:\projetos\minha-dissertacao`).
+---
 
-- **Imagens não aparecem**: verifique caminho relativo e extensão (`figs/…`).
+## 📁 Estrutura dos Arquivos
 
-- **Citações não resolvem**: confira a chave BibTeX em 
-`referencias.bib` e a sintaxe para citações com o sistema Quarto.
+| Arquivo | Descrição |
+|---------|-----------|
+| `template_dissertacao.qmd` | **Documento principal** - corpo da dissertação |
+| `pre_textuais.tex` | **Elementos pré-textuais** (capa, resumo, etc.) |
+| `referencias.bib` | **Bibliografia** em formato BibTeX |
+| `associacao-brasileira-de-normas-tecnicas-ipea.csl` | **Estilo ABNT 2023** |
+| `template_dissertacao.Rproj` | **Projeto RStudio** (versionado) |
+| `entregas/` | **Pasta para PDFs finais** (crie conforme necessário) |
 
+### Pastas importantes:
 
+- `figs/` - Imagens e gráficos
+- `dados/` - Datasets (se aplicável)
+- `scripts/` - Scripts R auxiliares
 
+---
 
-## Próximos passos (sugestão de roteiro)
+## Workflow Recomendado
 
-1. Adicione suas referências em `referencias.bib`. 
+### Desenvolvimento diário:
 
-  - Mantenha seu arquivo .bib organizado (usando espaços e formatação adequada) 
-  ou use um gerenciador de referências (ex.: Zotero, Mendeley).
+1. **Abrir o RStudio e seu projeto**: duplo-clique no `.Rproj`
+2. **Editar conteúdo**: `template_dissertacao.qmd`
+3. **Renderizar**: `Ctrl+Shift+K` ou botão "Render"
+4. **Commit frequente**: salvar progresso no Git
 
-2. Após finalizar a modelagem econométrica (utilize um outro 
-projeto RStudio para isso), comece a escrever os capítulos no
-arquivo `template_dissertacao.qmd`.
+### Entregas importantes:
 
-3. Gere versões de leitura (`quarto render`) e, quando necessário, 
-mova o arquivo pdf gerado para uma pasta (`entregas/`), 
+1. **Gerar PDF final**: `quarto render`
+2. **Copiar para pasta entregas**: `entregas/dissertacao_v1.pdf`
+3. **Commit e push**: sincronizar com GitHub
 
+---
 
-4. Leia e entenda `pre_textuais.tex` (personalize capa, rosto, dedicatória, 
-   resumo/abstract), em seguida, faça as edições necessárias.
-  
+## Boas Práticas
 
+### Versionamento (Git):
 
+✅ **Versione sempre**:
 
+- `.qmd`, `.tex`, `.bib`, `.csl`, `.Rproj`
+- Scripts R personalizados
+- Dados pequenos (< 100MB)
 
+❌ **NÃO versione**:
 
-**IMPORTANTE: Substitua este README agora pelo modelo que forneci**
+- PDFs gerados automaticamente
+- Cache do Quarto (`_freeze/`)
+- Dados temporários
+
+### Organização:
+
+- **Commits descritivos**: "Adiciona seção de metodologia" em vez de "update"
+- **Backup regular**: push para GitHub frequentemente
+- **Versões importantes**: use tags Git para marcos importantes
+
+### Escrita:
+
+- **Seções pequenas**: escreva incrementalmente
+- **Renderize frequentemente**: detecte erros rapidamente
+- **Referências organizadas**: mantenha `.bib` limpo
+
+---
+
+## Soluções para Problemas Comuns
+
+### Erro de LaTeX/pacotes faltando:
+
+```bash
+# Reinstalar TinyTeX
+quarto uninstall tinytex
+quarto install tinytex
+
+# Instalar pacote específico
+tlmgr install NOME_DO_PACOTE
+```
+
+### Imagens não aparecem:
+
+- Verifique caminho relativo: `figs/imagem.png` ✅
+- Formatos suportados: PNG, JPG, PDF
+
+### Citações não funcionam:
+
+- Verificar se a chave BibTeX existe em `referencias.bib`
+- Sintaxe correta no quarto: `[@chave2023]` ou `@chave2023`, etc.
+
+### Performance lenta:
+
+```r
+# Limpar cache do Quarto
+quarto::quarto_render("template_dissertacao.qmd", cache_refresh = TRUE)
+```
+
+---
+
+## Cronograma Sugerido
+
+### Fase 1 - Configuração (1ª semana):
+
+- [ ] Instalar todas as dependências
+- [ ] Criar e clonar repositório
+- [ ] Testar renderização inicial
+- [ ] Personalizar elementos pré-textuais
+
+### Fase 2 - Desenvolvimento:
+
+- [ ] Adicionar referências principais ao `.bib`
+- [ ] Escrever capítulos incrementalmente
+- [ ] Renderizar e revisar semanalmente
+
+### Fase 3 - Finalização:
+
+- [ ] Revisão completa dos elementos pré-textuais
+- [ ] Formatação final e ajustes
+- [ ] Gerar versão final para entrega
 
 
