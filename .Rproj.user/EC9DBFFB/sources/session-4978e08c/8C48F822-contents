@@ -1,0 +1,208 @@
+---
+lang: pt
+format:
+  pdf:
+    include-before-body:
+      - file: pre_textuais.tex
+    include-in-header:
+      - text: |
+          \usepackage{indentfirst}
+          \usepackage{microtype}
+          \usepackage{titlesec}
+          \usepackage{ragged2e}
+    documentclass: report
+    papersize: a4
+    geometry:
+      - top = 3cm
+      - bottom = 2cm
+      - left = 3cm
+      - right = 2cm
+    fontsize: 12pt
+    linestretch: 1.25
+    indent: true
+    toc: true
+    toc-title: Sumário
+    toc-depth: 3
+    number-sections: true
+    fig-dpi: 300
+    fig-cap-location: bottom
+    tbl-cap-location: top
+    lof: false
+    lot: false
+    link-citations: true
+execute: 
+  echo: false
+  warning: false
+  message: false
+crossref:
+  fig-prefix: 'Fig.'
+  tbl-prefix: 'Tab.'
+bibliography: referencias.bibtex
+csl: associacao-brasileira-de-normas-tecnicas-ipea.csl
+editor: source
+---
+
+
+# Introdução {#sec-introducao}
+
+Sexta e última seção a ser escrita.
+
+
+
+
+
+# Justificativa {#sec-justificativa}
+
+Segunda seção a ser escrita.
+
+
+
+# Objetivos {#sec-objetivos}
+
+Terceira seção a ser escrita.
+
+
+## Objetivo Geral {#sec-objgeral}
+
+
+## Objetivos Específicos {#sec-objespecficos}
+
+
+
+
+
+# Revisão de Literatura {#sec-revisao}
+
+Primeira seção a ser escrita.
+
+Exemplo de citação: @cruz_gonzalez_2017
+
+
+
+
+
+# Metodologia {#sec-metodologia}
+
+Quarta seção a ser escrita
+
+
+## Dados
+
+Descrição precisa dos dados que serão utilizados...
+
+
+
+
+
+# Resultados Esperados {#sec-esperados}
+
+Quinta seção a ser escrita.
+
+
+
+# Cronograma {#sec-cronograma}
+
+Sexta seção a ser criada, basta editar o código com as tarefas 
+e datas iniciais e finais no código do gráfio a seguir.
+
+
+```{r}
+#| label: fig-cronograma
+#| fig-cap: "Cronograma das etapas para execução do projeto."
+#| fig-align: center
+#| fig-width: 8
+#| fig-height: 3.8
+#| out-width: 100%
+
+# pacotes necessarios
+library(tidyverse)
+library(ggplot2)
+
+# tarefas individuais e prazos salvos em uma data frame
+tasks <- data.frame(
+  Task = c(
+    "Coleta dos Dados",
+    "Análise dos Dados",
+    "Redação",
+    "Submissão ao Orientador",
+    "Revisão Final"
+  ),
+  StartDate = as.Date(
+    c(
+      "2025-07-01",     # Coleta começa em julho/2025
+      "2025-09-01",     # Análise começa em setembro/2025
+      "2025-10-15",     # Redação começa em outubro/2025
+      "2025-11-15",     # Submissão começa em novembro/2025
+      "2026-01-15"      # Revisão Final começa em janeiro/2026
+    )
+  ),
+  EndDate = as.Date(
+    c(
+      "2025-08-31",     # Coleta termina em agosto/2025
+      "2025-12-31",     # Análise termina em dezembro/2025
+      "2026-01-31",     # Redação termina em janeiro/2026
+      "2026-02-28",     # Submissão termina em fevereiro/2026
+      "2026-03-31"      # Revisão termina em março/2026
+    )
+  )
+)
+
+# Calcula a duração total do projeto para ajustar as margens
+project_start <- min(tasks$StartDate)
+project_end <- max(tasks$EndDate)
+date_range <- c(project_start - 15, project_end + 15)  # margem de 15 dias
+
+# Cores para as tarefas
+colors <- c("#deecfb", "#bedaf7", "#7ab3ef", "#368ce7", "#1666ba")
+
+# Cria o gráfico
+ggplot(tasks, aes(x = StartDate, xend = EndDate, y = fct_rev(fct_inorder(Task)), yend = Task)) + 
+  # Adiciona linhas verticais para os meses
+  geom_vline(
+    xintercept = seq(as.Date("2025-07-01"), as.Date("2026-04-01"), by = "1 month"), 
+    color = "gray92", linewidth = 0.5
+  ) +
+  
+  # Adiciona as barras com tamanho reduzido
+  geom_segment(linewidth = 10, color = colors, lineend = "round") +
+  
+  # Melhora as escalas do eixo X
+  scale_x_date(
+    limits = date_range,
+    date_breaks = "1 month",
+    date_labels = "%b\n%Y", 
+    expand = c(0, 0)
+  ) +
+  
+  # Configura títulos
+  labs(
+    title = NULL,
+    x = NULL,
+    y = NULL
+  ) + 
+  
+  # Personaliza o tema
+  theme_minimal() + 
+  theme(
+    legend.position = "none",
+    panel.grid.major.x = element_blank(),
+    panel.grid.minor = element_blank(),
+    panel.grid.major.y = element_line(color = "gray95"),
+    axis.text.x = element_text(size = 8),
+    axis.text.y = element_text(size = 9, margin = margin(r = 10)),
+    plot.margin = margin(t = 20, r = 15, b = 10, l = 10)
+  )
+```
+
+
+
+
+
+# Referências {#sec-referencias .unnumbered}
+
+::: {#refs}
+:::
+
+
+
+

@@ -1,0 +1,92 @@
+
+\thispagestyle{empty}
+
+\begin{center}
+    \small
+    \sc Instituto Federal de Educação, Ciência e Tecnologia de Minas Gerais \\ 
+    \sc Campus Formiga \\
+    \sc Mestrado Profissional em Administração
+    
+   
+    \vspace{3cm}
+    \large {SEU NOM}E
+    
+    \vspace{3cm}
+     \large \textbf{TÍTULO} \\
+    Subtítulo
+    
+    \vspace{2cm}
+    \begin{flushright}
+    \begin{minipage}{0.6\textwidth}
+    \small
+    Projeto apresentado ao Programa de Pós-
+    Graduação em Administração do Instituto
+    Federal de Educação, Ciência e
+    Tecnologia de Minas Gerais - \textit{Campus} Formiga 
+    (IFMG - \textit{Campus} Formiga), como requisito para 
+    o Exame de Qualificação do Mestrado Profissional em 
+    Administração.
+    \end{minipage}
+    \end{flushright}
+    
+    \vspace{0.5cm}
+    \begin{flushright}
+    \small
+    Orientador: Prof. Dr Nome Completo.\\
+    Coorientador: Prof. Dr. Nome Completo (se houver).
+    
+    \vspace{0.5cm}
+    Linha de Pesquisa: Finanças Corporativas e Investimentos.
+    \end{flushright}
+    
+    \vfill
+    Formiga, Minas Gerais \\
+    2025
+\end{center}
+
+
+\newpage
+
+\thispagestyle{empty}
+
+\newenvironment{meuresumo}{
+  \clearpage
+  \small
+  \vspace{-1cm}
+  \begin{center}
+    \bfseries RESUMO
+    \vspace{0.5em}
+  \end{center}
+  \begin{quote}
+}{
+  \end{quote}
+  \vspace{-1.1em}
+  \begin{center}
+  \begin{minipage}{0.87\textwidth} 
+  \textbf{Palavras-chave:} palavra 1, palavra 2, palavra 3.
+  \end{minipage}
+  \end{center}
+  \clearpage
+}
+
+\begin{meuresumo}
+ESCREVA AQUI O RESUMO
+\end{meuresumo}
+
+
+
+
+% formatação do título de cada seção
+\makeatletter
+\def\@makechapterhead#1{%
+  \vspace*{50\p@}%
+  {\parindent \z@ \raggedright \normalfont
+    \ifnum \c@secnumdepth >\m@ne
+      \huge\bfseries \thechapter\space
+    \fi
+    \huge \bfseries #1\par\nobreak
+    \vskip 40\p@
+  }}
+\makeatother
+
+

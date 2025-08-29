@@ -1,0 +1,83 @@
+# ============================================================
+# R / RStudio
+# ============================================================
+.Rhistory
+.Rapp.history
+.RData
+.Ruserdata
+.Rproj.user/         # mantém configuração local do RStudio fora do git
+
+
+# renv / packrat
+renv/library/
+renv/staging/
+
+
+# ============================================================
+# Quarto / knitr / Pandoc
+# ============================================================
+_book/
+_site/
+.quarto/
+_freeze/
+*_cache/
+cache/
+*.utf8.md
+*.knit.md
+*_files/
+
+# ============================================================
+# LaTeX (artefatos de compilação)
+# ============================================================
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
+*.lof
+*.lot
+*.xdv
+*.nav
+*.snm
+*.vrb
+
+# Se ativar keep-tex: true e não quiser versionar .tex gerados:
+# *.tex
+
+# ============================================================
+# SO / Metadados (macOS & Windows)
+# ============================================================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+.Spotlight-V100
+.Trashes
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# ============================================================
+# Temporários gerais
+# ============================================================
+*.tmp
+*.swp
+*.swo
+*~
+
+
+# ============================================================
+# PDF
+# ============================================================
+*.pdf
